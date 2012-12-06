@@ -20,6 +20,8 @@
 @property(nonatomic, strong) NSMutableArray *searches;
 @property(nonatomic, strong) Flickr *flickr;
 
+@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
 -(IBAction)shareButtonTapped:(id)sender;
 
 @end
