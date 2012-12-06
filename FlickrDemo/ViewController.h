@@ -10,7 +10,7 @@
 #import "Flickr.h"
 #import "FlickrPhoto.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
@@ -19,6 +19,8 @@
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
 @property(nonatomic, strong) Flickr *flickr;
+
+@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 -(IBAction)shareButtonTapped:(id)sender;
 
