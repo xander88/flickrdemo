@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E400D5F1672AA41006BBE5A /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E400D5E1672AA41006BBE5A /* FlickrPhotoCell.m */; };
 		4EC513B5167044D600333A51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC513B4167044D600333A51 /* UIKit.framework */; };
 		4EC513B7167044D600333A51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC513B6167044D600333A51 /* Foundation.framework */; };
 		4EC513B9167044D600333A51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC513B8167044D600333A51 /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E400D5D1672AA41006BBE5A /* FlickrPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
+		4E400D5E1672AA41006BBE5A /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
 		4EC513B0167044D600333A51 /* FlickrDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC513B4167044D600333A51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EC513B6167044D600333A51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				4EC513C4167044D600333A51 /* AppDelegate.m */,
 				4EC513CF167044D600333A51 /* ViewController.h */,
 				4EC513D0167044D600333A51 /* ViewController.m */,
+				4E400D5D1672AA41006BBE5A /* FlickrPhotoCell.h */,
+				4E400D5E1672AA41006BBE5A /* FlickrPhotoCell.m */,
 				4EC513F41670ACB500333A51 /* Flickr.h */,
 				4EC513F51670ACB500333A51 /* Flickr.m */,
 				4EC513F61670ACB500333A51 /* FlickrPhoto.h */,
@@ -285,6 +290,7 @@
 				4EC513C1167044D600333A51 /* main.m in Sources */,
 				4EC513C5167044D600333A51 /* AppDelegate.m in Sources */,
 				4EC513D1167044D600333A51 /* ViewController.m in Sources */,
+				4E400D5F1672AA41006BBE5A /* FlickrPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

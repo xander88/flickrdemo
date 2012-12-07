@@ -44,20 +44,35 @@
                                     <constraint firstAttribute="width" constant="692" id="uNA-ws-aQL"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nGK-Cw-jmP">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t9i-mQ-YA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="t9i-mQ-YA0" customClass="FlickrPhotoCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-gn-BOR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" type="user" id="AHl-xh-lye"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="jvb-gn-BOR" firstAttribute="top" secondItem="t9i-mQ-YA0" secondAttribute="top" type="default" id="1Sc-lS-U7T"/>
+                                            <constraint firstItem="jvb-gn-BOR" firstAttribute="leading" secondItem="t9i-mQ-YA0" secondAttribute="leading" type="default" id="7u0-oW-Cju"/>
+                                            <constraint firstItem="jvb-gn-BOR" firstAttribute="trailing" secondItem="t9i-mQ-YA0" secondAttribute="trailing" type="default" id="UUC-fe-DYY"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="jvb-gn-BOR" id="l4u-vy-Ck3"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -73,10 +88,10 @@
                             <constraint firstItem="2W6-Jt-rNx" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="FMv-HB-4LI"/>
                             <constraint firstItem="h06-1R-bGo" firstAttribute="top" secondItem="5" secondAttribute="top" constant="112" id="UKz-1w-vD0"/>
                             <constraint firstItem="2W6-Jt-rNx" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="UzM-3W-iMG"/>
-                            <constraint firstItem="eOd-VW-yOt" firstAttribute="top" secondItem="5" secondAttribute="top" constant="152" id="WH5-ic-yZB"/>
                             <constraint firstItem="h06-1R-bGo" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="409" id="d6F-43-T31"/>
-                            <constraint firstItem="eOd-VW-yOt" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="228" id="jZt-GZ-I6v"/>
+                            <constraint firstItem="eOd-VW-yOt" firstAttribute="top" secondItem="5" secondAttribute="top" constant="152" id="dYj-qm-dzT"/>
                             <constraint firstItem="lrh-QF-vsa" firstAttribute="baseline" secondItem="h06-1R-bGo" secondAttribute="baseline" type="default" id="kH3-8d-gND"/>
+                            <constraint firstItem="eOd-VW-yOt" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="228" id="uOZ-70-IFN"/>
                             <constraint firstItem="lrh-QF-vsa" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="493" id="zjJ-Dz-DGb"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -91,10 +106,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="-69"/>
+            <point key="canvasLocation" x="-576" y="-225"/>
         </scene>
     </scenes>
     <classes>
+        <class className="FlickrPhotoCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrPhotoCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -106,9 +127,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>

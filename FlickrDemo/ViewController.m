@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FlickrPhotoCell.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,7 @@
     self.searchResults = [@{} mutableCopy];
     self.flickr = [[Flickr alloc] init];
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"FlickrCell"];
+    // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"FlickrCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +59,7 @@
     return YES;
 }
 
-#pragma mark - UICollectionView Datasource
+#pragma mark - UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     NSString *searchTerm = self.searches[section];
@@ -72,8 +73,9 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor greenColor];
+    FlickrPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
+    NSString *searchTerm = self.searches[indexPath.section];
+    cell.photo = self.searchResults[searchTerm][indexPath.row];
     return cell;
 }
 
