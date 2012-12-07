@@ -37,22 +37,53 @@
                                     <outlet property="delegate" destination="2" id="ACv-uH-MXF"/>
                                 </connections>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eOd-VW-yOt">
+                                <color key="backgroundColor" red="0.23178522537757817" green="0.4238389190331836" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="554" id="mUX-N5-iLp"/>
+                                    <constraint firstAttribute="width" constant="692" id="uNA-ws-aQL"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nGK-Cw-jmP">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t9i-mQ-YA0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="Qkr-AH-xLk"/>
+                                    <outlet property="delegate" destination="2" id="MFp-z4-GQd"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.9764262798099641" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lrh-QF-vsa" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="491" id="BJC-6X-b8y"/>
+                            <constraint firstItem="lrh-QF-vsa" firstAttribute="top" secondItem="5" secondAttribute="top" constant="108" id="04g-UY-DLq"/>
                             <constraint firstItem="2W6-Jt-rNx" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="CcH-Ni-ekS"/>
                             <constraint firstItem="2W6-Jt-rNx" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="FMv-HB-4LI"/>
+                            <constraint firstItem="h06-1R-bGo" firstAttribute="top" secondItem="5" secondAttribute="top" constant="112" id="UKz-1w-vD0"/>
                             <constraint firstItem="2W6-Jt-rNx" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="UzM-3W-iMG"/>
+                            <constraint firstItem="eOd-VW-yOt" firstAttribute="top" secondItem="5" secondAttribute="top" constant="152" id="WH5-ic-yZB"/>
+                            <constraint firstItem="h06-1R-bGo" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="409" id="d6F-43-T31"/>
+                            <constraint firstItem="eOd-VW-yOt" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="228" id="jZt-GZ-I6v"/>
                             <constraint firstItem="lrh-QF-vsa" firstAttribute="baseline" secondItem="h06-1R-bGo" secondAttribute="baseline" type="default" id="kH3-8d-gND"/>
-                            <constraint firstItem="h06-1R-bGo" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="407" id="nE7-xX-kLC"/>
-                            <constraint firstItem="h06-1R-bGo" firstAttribute="top" secondItem="5" secondAttribute="top" constant="154" id="ppu-ST-o2R"/>
-                            <constraint firstItem="lrh-QF-vsa" firstAttribute="top" secondItem="5" secondAttribute="top" constant="150" id="uty-Cd-rSq"/>
+                            <constraint firstItem="lrh-QF-vsa" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="493" id="zjJ-Dz-DGb"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="collectionView" destination="eOd-VW-yOt" id="Epb-Xc-QXx"/>
                         <outlet property="shareButton" destination="7af-WV-3e5" id="T2h-Ab-uB1"/>
                         <outlet property="textField" destination="lrh-QF-vsa" id="cGD-aY-CqZ"/>
                         <outlet property="toolbar" destination="2W6-Jt-rNx" id="AFa-mf-OnJ"/>
@@ -67,10 +98,23 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="shareButtonTapped:"/>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>

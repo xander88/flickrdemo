@@ -127,11 +127,11 @@
 				4EC513C4167044D600333A51 /* AppDelegate.m */,
 				4EC513CF167044D600333A51 /* ViewController.h */,
 				4EC513D0167044D600333A51 /* ViewController.m */,
-				4EC513CC167044D600333A51 /* MainStoryboard.storyboard */,
 				4EC513F41670ACB500333A51 /* Flickr.h */,
 				4EC513F51670ACB500333A51 /* Flickr.m */,
 				4EC513F61670ACB500333A51 /* FlickrPhoto.h */,
 				4EC513F71670ACB500333A51 /* FlickrPhoto.m */,
+				4EC513CC167044D600333A51 /* MainStoryboard.storyboard */,
 				4EC513BB167044D600333A51 /* Supporting Files */,
 			);
 			path = FlickrDemo;
@@ -460,6 +460,7 @@
 				4EC513EB167044D700333A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EC513EC167044D700333A51 /* Build configuration list for PBXNativeTarget "FlickrDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				4EC513EE167044D700333A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
